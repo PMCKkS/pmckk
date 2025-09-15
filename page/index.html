@@ -463,19 +463,36 @@
 
 <script src=https://pmckks.github.io/pmckk/background/particles.min.js></script>
 <script>
-  particlesJS.load('particles-js', "https://pmckks.github.io/pmckk/background/particlesjs-config.json", function() {
-    console.log('particles.js loaded - callback');
-  });
+    particlesJS.load('particles-js', {
+        {
+            (resources.Get "background/particlesjs-config.json").Permalink
+        }
+    }, function() {
+        console.log('particles.js loaded - callback');
+    });
 </script>
 
 <style>
-  #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
+    #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
 </style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        audio: []
+        fixed: true
+    });
+</script>
     </body>
 </html>
