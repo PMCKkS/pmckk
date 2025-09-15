@@ -483,19 +483,23 @@
 
 <script src=https://pmckks.github.io/pmckk/background/particles.min.js></script>
 <script>
-  particlesJS.load('particles-js', "https://pmckks.github.io/pmckk/background/particlesjs-config.json", function() {
-    console.log('particles.js loaded - callback');
-  });
+    particlesJS.load('particles-js', {
+        {
+            (resources.Get "background/particlesjs-config.json").Permalink
+        }
+    }, function() {
+        console.log('particles.js loaded - callback');
+    });
 </script>
 
 <style>
-  #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
+    #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
 </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -503,10 +507,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-<meting-js
-	server="netease"
-	type="playlist"
-	id="12614426800">
+<meting-js fixed="true" server="netease" type="playlist" id="12614426800">
 </meting-js>
     </body>
 </html>
