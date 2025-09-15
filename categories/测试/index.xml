@@ -8,24 +8,27 @@
         <language>zh-cn</language>
         <copyright>PMCKK</copyright>
         <lastBuildDate>Tue, 09 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://pmckks.github.io/pmckk/categories/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>中文测试</title>
-        <link>https://pmckks.github.io/pmckk/p/test-chinese/</link>
+        <title>MC服务器核心知识</title>
+        <link>https://pmckks.github.io/pmckk/p/mc-sever-core/</link>
         <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://pmckks.github.io/pmckk/p/test-chinese/</guid>
-        <description>&lt;img src="https://pmckks.github.io/pmckk/p/test-chinese/background.jpg" alt="Featured image of post 中文测试" /&gt;&lt;h2 id=&#34;mc服务器基础相关知识&#34;&gt;MC服务器基础相关知识
+        <guid>https://pmckks.github.io/pmckk/p/mc-sever-core/</guid>
+        <description>&lt;img src="https://pmckks.github.io/pmckk/p/mc-sever-core/background.jpg" alt="Featured image of post MC服务器核心知识" /&gt;&lt;h2 id=&#34;mc服务器基础相关知识&#34;&gt;MC服务器基础相关知识
 &lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;MC常见的服务端类型:
-&lt;strong&gt;纯净端:&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;MC常见的服务端类型:&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;纯净端:&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;纯净端一般指是无任何额外内容,没有插件以及模组,原生态的服务器。&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;插件端&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;插件端:&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;插件端一般指是在原版基础内容上仅有附加的插件功能,一般为.jar格式,存放目录一般为/server/plugins&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;模组端&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;模组端:&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;模组端相较于以上两个功能更为强大,一般这种服务端是基于整合包创建,存放目录为:/server/plugins。&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;混合端:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;相比模组端和纯净端,功能更加强大,缺点是仅forge混合比较完善,fabric虽然也有但是不稳定,经常容易报错&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         
