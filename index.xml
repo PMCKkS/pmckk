@@ -21,11 +21,8 @@
         <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
         
         <guid>https://pmckks.github.io/pmckk/p/mc-sever-core/</guid>
-        <description>&lt;img src="https://pmckks.github.io/pmckk/p/mc-sever-core/background.jpg" alt="Featured image of post MC服务器核心知识" /&gt;&lt;h2 id=&#34;mc服务器基础相关知识&#34;&gt;MC服务器基础相关知识
-&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;MC常见的服务端类型:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;纯净端:&lt;/strong&gt;&lt;/p&gt;
+        <description>&lt;img src="https://pmckks.github.io/pmckk/p/mc-sever-core/background.jpg" alt="Featured image of post MC服务器核心知识" /&gt;&lt;h2 id=&#34;1-mc常见的服务端类型&#34;&gt;1. MC常见的服务端类型:
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;纯净端:&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;纯净端一般指是无任何额外内容,没有插件以及模组,原生态的服务器。&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;插件端:&lt;/strong&gt;&lt;/p&gt;
