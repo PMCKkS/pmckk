@@ -25,7 +25,7 @@
 &lt;p&gt;&lt;em&gt;插件端一般指是在原版基础内容上仅有附加的插件功能,一般为.jar格式,存放目录一般为/server/plugins&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;模组端:&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;模组端相较于以上两个功能更为强大,一般这种服务端是基于整合包创建,存放目录为:/server/plugins。&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;模组端相较于以上两个功能更为强大,一般这种服务端是基于整合包创建,存放目录为:/server/mods。&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;混合端:&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;相比模组端和纯净端,功能更加强大,缺点是仅forge混合比较完善,fabric虽然也有但是不稳定,经常容易报错&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
