@@ -13,27 +13,36 @@
         <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
         
         <guid>https://pmckks.github.io/pmckk/p/mc-sever-build-1/</guid>
-        <description>&lt;img src="https://pmckks.github.io/pmckk/p/mc-sever-build-1/OIP-C.png" alt="Featured image of post MC服务器搭建指南-1" /&gt;&lt;h2 id=&#34;1-quickstart&#34;&gt;1. QuickStart
-&lt;/h2&gt;&lt;h3 id=&#34;了解服务端文件架构&#34;&gt;&lt;strong&gt;了解服务端文件架构&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;&lt;em&gt;注:群组服会单独拉出来讲.&lt;/em&gt;
+        <description>&lt;img src="https://pmckks.github.io/pmckk/p/mc-sever-build-1/OIP-C.png" alt="Featured image of post MC服务器搭建指南-1" /&gt;&lt;h2 id=&#34;了解服务端文件架构&#34;&gt;&lt;strong&gt;了解服务端文件架构&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;注:群组服会单独拉出来讲.&lt;/em&gt;&lt;br&gt;
 服务器结构(带&amp;quot;·&amp;ldquo;文件非构建必须):&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;/server&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;.server core(名字一般为核心名如.fabric .mohist等)
--library(资源文件,此文件特殊,一般启动的时候会下载)&lt;/li&gt;
-&lt;li&gt;config(配置文件)&lt;/li&gt;
-&lt;li&gt;log(日志文件)&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;world(存档文件夹)
-eula(用户协议:一般生成后需要把内容改为eula:true)&lt;/li&gt;
-&lt;li&gt;server.properties.Properties(服务器配置文件，其他核心会有bukkit spigot)
-server.jar(服务核心文件,要是没这个就别玩了孩子)&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;构建服务器&#34;&gt;&lt;strong&gt;构建服务器&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;首先从服务器核心获取:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  └── /server  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├── .server core(名字一般为核心名如.fabric .mohist等)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├──library(资源文件,此文件特殊,一般启动的时候会下载)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├──config(配置文件)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├──log(日志文件)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├──world(存档文件夹)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├──eula(用户协议:一般生成后需要把内容改为eula:true)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ├──server.properties.Properties(服务器配置文件，其他核心会有bukkit spigot)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        └──server.jar(服务核心文件,要是没这个就别玩了孩子)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;构建服务器&#34;&gt;&lt;strong&gt;构建服务器&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;1首先从服务器核心获取&#34;&gt;&lt;strong&gt;1.首先从服务器核心获取:&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;纯净端:&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
@@ -44,19 +53,19 @@ server.jar(服务核心文件,要是没这个就别玩了孩子)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Paper:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://papermc.io/downloads/all&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://papermc.io/downloads/all&lt;/a&gt;
+    &gt;https://papermc.io/downloads/all&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Purpur:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://purpurmc.org/download/purpur/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://purpurmc.org/download/purpur/&lt;/a&gt;
+    &gt;https://purpurmc.org/download/purpur/&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Leaves:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://leavesmc.org/downloads/leaves&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://leavesmc.org/downloads/leaves&lt;/a&gt;
+    &gt;https://leavesmc.org/downloads/leaves&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Leaf:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.leafmc.one/zh/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.leafmc.one/zh/download&lt;/a&gt;
+    &gt;https://www.leafmc.one/zh/download&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;PandaSpigot:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip&lt;/a&gt;
+    &gt;https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;SportPaper:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Electroid/SportPaper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/Electroid/SportPaper&lt;/a&gt;
+    &gt;https://github.com/Electroid/SportPaper&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;CraftBukkit:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://getbukkit.org/download/craftbukkit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://getbukkit.org/download/craftbukkit&lt;/a&gt;
+    &gt;https://getbukkit.org/download/craftbukkit&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Spigot:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://getbukkit.org/download/spigot/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://getbukkit.org/download/spigot/&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
@@ -64,9 +73,9 @@ server.jar(服务核心文件,要是没这个就别玩了孩子)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Fabric:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://fabricmc.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://fabricmc.net/&lt;/a&gt;
+    &gt;https://fabricmc.net/&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Forge:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://files.minecraftforge.net/net/minecraftforge/forge/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://files.minecraftforge.net/net/minecraftforge/forge/&lt;/a&gt;
+    &gt;https://files.minecraftforge.net/net/minecraftforge/forge/&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;NeoForge:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://neoforged.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://neoforged.net/&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
@@ -74,15 +83,15 @@ server.jar(服务核心文件,要是没这个就别玩了孩子)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Cardboard:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://cardboardpowered.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://cardboardpowered.org/&lt;/a&gt;
+    &gt;https://cardboardpowered.org/&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Arclight:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/IzzelAliz/Arclight&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/IzzelAliz/Arclight&lt;/a&gt;
+    &gt;https://github.com/IzzelAliz/Arclight&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Taiyitist:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/TaiyitistMC/Taiyitist&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/TaiyitistMC/Taiyitist&lt;/a&gt;
+    &gt;https://github.com/TaiyitistMC/Taiyitist&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Mohist:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://mohistmc.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://mohistmc.com/&lt;/a&gt;
+    &gt;https://mohistmc.com/&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Catserver:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://catmc.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://catmc.org/&lt;/a&gt;
+    &gt;https://catmc.org/&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Sponge:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://spongepowered.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://spongepowered.org/&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 </description>

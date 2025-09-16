@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://pmckks.github.io/pmckk/p/mc-sever-build-1/'>
 
-<link rel="stylesheet" href="/pmckk/scss/style.min.15a2305d4fadd37efdfbd61a41ab2ad2392de3311e26c6a582a369eb3f66db9a.css"><meta property='og:title' content="MC服务器搭建指南-1">
+<link rel="stylesheet" href="/pmckk/scss/style.min.a053d4e44d0d7b06b64d3ee15cc978c5b9e1f05ffba330d23702277eed10a59d.css"><meta property='og:title' content="MC服务器搭建指南-1">
 <meta property='og:description' content="MC服务器搭建">
 <meta property='og:url' content='https://pmckks.github.io/pmckk/p/mc-sever-build-1/'>
 <meta property='og:site_name' content='PMCKK'>
@@ -276,12 +276,12 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#1-quickstart">1. QuickStart</a>
+    <li><a href="#了解服务端文件架构"><strong>了解服务端文件架构</strong></a></li>
+    <li><a href="#构建服务器"><strong>构建服务器</strong></a>
       <ol>
-        <li><a href="#了解服务端文件架构"><strong>了解服务端文件架构</strong></a></li>
+        <li><a href="#1首先从服务器核心获取"><strong>1.首先从服务器核心获取:</strong></a></li>
       </ol>
     </li>
-    <li><a href="#构建服务器"><strong>构建服务器</strong></a></li>
   </ol>
 </nav>
         </div>
@@ -366,27 +366,36 @@
 </header> <section class="article-content">
     
     
-    <h2 id="1-quickstart">1. QuickStart
-</h2><h3 id="了解服务端文件架构"><strong>了解服务端文件架构</strong>
-</h3><p><em>注:群组服会单独拉出来讲.</em>
+    <h2 id="了解服务端文件架构"><strong>了解服务端文件架构</strong>
+</h2><p><em>注:群组服会单独拉出来讲.</em><br>
 服务器结构(带&quot;·&ldquo;文件非构建必须):</p>
-<blockquote>
-<p>/server</p>
-<blockquote>
-<ul>
-<li>.server core(名字一般为核心名如.fabric .mohist等)
--library(资源文件,此文件特殊,一般启动的时候会下载)</li>
-<li>config(配置文件)</li>
-<li>log(日志文件)</li>
-<li></li>
-<li>world(存档文件夹)
-eula(用户协议:一般生成后需要把内容改为eula:true)</li>
-<li>server.properties.Properties(服务器配置文件，其他核心会有bukkit spigot)
-server.jar(服务核心文件,要是没这个就别玩了孩子)</li>
-</ul></blockquote></blockquote>
-<h2 id="构建服务器"><strong>构建服务器</strong>
-</h2><p><strong>首先从服务器核心获取:</strong></p>
-<ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  └── /server  
+</span></span><span class="line"><span class="cl">        ├── .server core(名字一般为核心名如.fabric .mohist等)  
+</span></span><span class="line"><span class="cl">        ├──library(资源文件,此文件特殊,一般启动的时候会下载)  
+</span></span><span class="line"><span class="cl">        ├──config(配置文件)  
+</span></span><span class="line"><span class="cl">        ├──log(日志文件)  
+</span></span><span class="line"><span class="cl">        ├──world(存档文件夹)  
+</span></span><span class="line"><span class="cl">        ├──eula(用户协议:一般生成后需要把内容改为eula:true)  
+</span></span><span class="line"><span class="cl">        ├──server.properties.Properties(服务器配置文件，其他核心会有bukkit spigot)  
+</span></span><span class="line"><span class="cl">        └──server.jar(服务核心文件,要是没这个就别玩了孩子)  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="构建服务器"><strong>构建服务器</strong>
+</h2><h3 id="1首先从服务器核心获取"><strong>1.首先从服务器核心获取:</strong>
+</h3><ul>
 <li><strong>纯净端:</strong></li>
 </ul>
 <blockquote>
@@ -397,19 +406,19 @@ server.jar(服务核心文件,要是没这个就别玩了孩子)</li>
 </ul>
 <blockquote>
 <p><em>Paper:</em> <a class="link" href="https://papermc.io/downloads/all"  target="_blank" rel="noopener"
-    >https://papermc.io/downloads/all</a>
+    >https://papermc.io/downloads/all</a><br>
 <em>Purpur:</em> <a class="link" href="https://purpurmc.org/download/purpur/"  target="_blank" rel="noopener"
-    >https://purpurmc.org/download/purpur/</a>
+    >https://purpurmc.org/download/purpur/</a><br>
 <em>Leaves:</em> <a class="link" href="https://leavesmc.org/downloads/leaves"  target="_blank" rel="noopener"
-    >https://leavesmc.org/downloads/leaves</a>
+    >https://leavesmc.org/downloads/leaves</a><br>
 <em>Leaf:</em> <a class="link" href="https://www.leafmc.one/zh/download"  target="_blank" rel="noopener"
-    >https://www.leafmc.one/zh/download</a>
+    >https://www.leafmc.one/zh/download</a><br>
 <em>PandaSpigot:</em> <a class="link" href="https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip"  target="_blank" rel="noopener"
-    >https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip</a>
+    >https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip</a><br>
 <em>SportPaper:</em> <a class="link" href="https://github.com/Electroid/SportPaper"  target="_blank" rel="noopener"
-    >https://github.com/Electroid/SportPaper</a>
+    >https://github.com/Electroid/SportPaper</a><br>
 <em>CraftBukkit:</em> <a class="link" href="https://getbukkit.org/download/craftbukkit"  target="_blank" rel="noopener"
-    >https://getbukkit.org/download/craftbukkit</a>
+    >https://getbukkit.org/download/craftbukkit</a><br>
 <em>Spigot:</em> <a class="link" href="https://getbukkit.org/download/spigot/"  target="_blank" rel="noopener"
     >https://getbukkit.org/download/spigot/</a></p></blockquote>
 <ul>
@@ -417,9 +426,9 @@ server.jar(服务核心文件,要是没这个就别玩了孩子)</li>
 </ul>
 <blockquote>
 <p><em>Fabric:</em> <a class="link" href="https://fabricmc.net/"  target="_blank" rel="noopener"
-    >https://fabricmc.net/</a>
+    >https://fabricmc.net/</a><br>
 <em>Forge:</em> <a class="link" href="https://files.minecraftforge.net/net/minecraftforge/forge/"  target="_blank" rel="noopener"
-    >https://files.minecraftforge.net/net/minecraftforge/forge/</a>
+    >https://files.minecraftforge.net/net/minecraftforge/forge/</a><br>
 <em>NeoForge:</em> <a class="link" href="https://neoforged.net/"  target="_blank" rel="noopener"
     >https://neoforged.net/</a></p></blockquote>
 <ul>
@@ -427,15 +436,15 @@ server.jar(服务核心文件,要是没这个就别玩了孩子)</li>
 </ul>
 <blockquote>
 <p><em>Cardboard:</em> <a class="link" href="https://cardboardpowered.org/"  target="_blank" rel="noopener"
-    >https://cardboardpowered.org/</a>
+    >https://cardboardpowered.org/</a><br>
 <em>Arclight:</em> <a class="link" href="https://github.com/IzzelAliz/Arclight"  target="_blank" rel="noopener"
-    >https://github.com/IzzelAliz/Arclight</a>
+    >https://github.com/IzzelAliz/Arclight</a><br>
 <em>Taiyitist:</em> <a class="link" href="https://github.com/TaiyitistMC/Taiyitist"  target="_blank" rel="noopener"
-    >https://github.com/TaiyitistMC/Taiyitist</a>
+    >https://github.com/TaiyitistMC/Taiyitist</a><br>
 <em>Mohist:</em> <a class="link" href="https://mohistmc.com/"  target="_blank" rel="noopener"
-    >https://mohistmc.com/</a>
+    >https://mohistmc.com/</a><br>
 <em>Catserver:</em> <a class="link" href="https://catmc.org/"  target="_blank" rel="noopener"
-    >https://catmc.org/</a>
+    >https://catmc.org/</a><br>
 <em>Sponge:</em> <a class="link" href="https://spongepowered.org/"  target="_blank" rel="noopener"
     >https://spongepowered.org/</a></p></blockquote>
 
@@ -666,9 +675,90 @@ server.jar(服务核心文件,要是没这个就别玩了孩子)</li>
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
 <meting-js fixed="true" server="netease" type="playlist" id="12614426800">
 </meting-js>
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://pmckks.github.io/pmckk/icons/codeMore.png"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
 <div id="particles-js"></div>
 
 <script src=https://pmckks.github.io/pmckk/background/particles.min.js></script>
