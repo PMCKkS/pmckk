@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://pmckks.github.io/pmckk/p/mc-sever-build-1/'>
 
-<link rel="stylesheet" href="/pmckk/scss/style.min.a053d4e44d0d7b06b64d3ee15cc978c5b9e1f05ffba330d23702277eed10a59d.css"><meta property='og:title' content="MC服务器搭建指南-1">
+<link rel="stylesheet" href="/pmckk/scss/style.min.79514ec7f8a956de2628f43b7a35e0befbeae756092155751a1777b6878e6f1b.css"><meta property='og:title' content="MC服务器搭建指南-1">
 <meta property='og:description' content="MC服务器搭建">
 <meta property='og:url' content='https://pmckks.github.io/pmckk/p/mc-sever-build-1/'>
 <meta property='og:site_name' content='PMCKK'>
@@ -277,9 +277,10 @@
             <nav id="TableOfContents">
   <ol>
     <li><a href="#了解服务端文件架构"><strong>了解服务端文件架构</strong></a></li>
-    <li><a href="#构建服务器"><strong>构建服务器</strong></a>
+    <li><a href="#构建服务端"><strong>构建服务端</strong></a>
       <ol>
-        <li><a href="#1首先从服务器核心获取"><strong>1.首先从服务器核心获取:</strong></a></li>
+        <li><a href="#下载服务器核心"><strong>下载服务器核心:</strong></a></li>
+        <li><a href="#构建服务端-1"><strong>构建服务端:</strong></a></li>
       </ol>
     </li>
   </ol>
@@ -356,7 +357,7 @@
 
 
             <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
         </div>
         
@@ -389,65 +390,103 @@
 </span></span><span class="line"><span class="cl">        ├──log(日志文件)  
 </span></span><span class="line"><span class="cl">        ├──world(存档文件夹)  
 </span></span><span class="line"><span class="cl">        ├──eula(用户协议:一般生成后需要把内容改为eula:true)  
-</span></span><span class="line"><span class="cl">        ├──server.properties.Properties(服务器配置文件，其他核心会有bukkit spigot)  
+</span></span><span class="line"><span class="cl">        ├──server.properties.Properties(服务器配置文件，其他核心会有bukkit spigot等)  
 </span></span><span class="line"><span class="cl">        └──server.jar(服务核心文件,要是没这个就别玩了孩子)  
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="构建服务器"><strong>构建服务器</strong>
-</h2><h3 id="1首先从服务器核心获取"><strong>1.首先从服务器核心获取:</strong>
-</h3><ul>
-<li><strong>纯净端:</strong></li>
-</ul>
+</div><h2 id="构建服务端"><strong>构建服务端</strong>
+</h2><h3 id="下载服务器核心"><strong>下载服务器核心:</strong>
+</h3><p><strong>纯净端:</strong></p>
 <blockquote>
-<p><em>Minecraft:</em> <a class="link" href="https://mcversions.net/"  target="_blank" rel="noopener"
-    >https://mcversions.net/</a></p></blockquote>
-<ul>
-<li><strong>插件端:</strong></li>
-</ul>
+<p><em><strong>Minecraft:</strong></em> <a class="link" href="https://mcversions.net/"  target="_blank" rel="noopener"
+    >下载</a></p></blockquote>
+<p><strong>插件端:</strong></p>
 <blockquote>
-<p><em>Paper:</em> <a class="link" href="https://papermc.io/downloads/all"  target="_blank" rel="noopener"
-    >https://papermc.io/downloads/all</a><br>
-<em>Purpur:</em> <a class="link" href="https://purpurmc.org/download/purpur/"  target="_blank" rel="noopener"
-    >https://purpurmc.org/download/purpur/</a><br>
-<em>Leaves:</em> <a class="link" href="https://leavesmc.org/downloads/leaves"  target="_blank" rel="noopener"
-    >https://leavesmc.org/downloads/leaves</a><br>
-<em>Leaf:</em> <a class="link" href="https://www.leafmc.one/zh/download"  target="_blank" rel="noopener"
-    >https://www.leafmc.one/zh/download</a><br>
-<em>PandaSpigot:</em> <a class="link" href="https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip"  target="_blank" rel="noopener"
-    >https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip</a><br>
-<em>SportPaper:</em> <a class="link" href="https://github.com/Electroid/SportPaper"  target="_blank" rel="noopener"
-    >https://github.com/Electroid/SportPaper</a><br>
-<em>CraftBukkit:</em> <a class="link" href="https://getbukkit.org/download/craftbukkit"  target="_blank" rel="noopener"
-    >https://getbukkit.org/download/craftbukkit</a><br>
-<em>Spigot:</em> <a class="link" href="https://getbukkit.org/download/spigot/"  target="_blank" rel="noopener"
-    >https://getbukkit.org/download/spigot/</a></p></blockquote>
-<ul>
-<li><strong>模组端(我们师徒三人):</strong></li>
-</ul>
+<p><em><strong>Paper:</strong></em> <a class="link" href="https://papermc.io/downloads/all"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Purpur:</strong></em> <a class="link" href="https://purpurmc.org/download/purpur/"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Leaves:</strong></em> <a class="link" href="https://leavesmc.org/downloads/leaves"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Leaf:</strong></em> <a class="link" href="https://www.leafmc.one/zh/download"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>PandaSpigot:</strong></em> <a class="link" href="https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>SportPaper:</strong></em> <a class="link" href="https://github.com/Electroid/SportPaper"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>CraftBukkit:</strong></em> <a class="link" href="https://getbukkit.org/download/craftbukkit"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Spigot:</strong></em> <a class="link" href="https://getbukkit.org/download/spigot/"  target="_blank" rel="noopener"
+    >下载</a></p></blockquote>
+<p><strong>模组端(我们师徒三人):</strong></p>
 <blockquote>
-<p><em>Fabric:</em> <a class="link" href="https://fabricmc.net/"  target="_blank" rel="noopener"
-    >https://fabricmc.net/</a><br>
-<em>Forge:</em> <a class="link" href="https://files.minecraftforge.net/net/minecraftforge/forge/"  target="_blank" rel="noopener"
-    >https://files.minecraftforge.net/net/minecraftforge/forge/</a><br>
-<em>NeoForge:</em> <a class="link" href="https://neoforged.net/"  target="_blank" rel="noopener"
-    >https://neoforged.net/</a></p></blockquote>
-<ul>
-<li><strong>混合端:</strong></li>
-</ul>
+<p><em><strong>Fabric:</strong></em> <a class="link" href="https://fabricmc.net/"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Forge:</strong></em> <a class="link" href="https://files.minecraftforge.net/net/minecraftforge/forge/"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>NeoForge:</strong></em> <a class="link" href="https://neoforged.net/"  target="_blank" rel="noopener"
+    >下载</a></p></blockquote>
+<p><strong>混合端:</strong></p>
 <blockquote>
-<p><em>Cardboard:</em> <a class="link" href="https://cardboardpowered.org/"  target="_blank" rel="noopener"
-    >https://cardboardpowered.org/</a><br>
-<em>Arclight:</em> <a class="link" href="https://github.com/IzzelAliz/Arclight"  target="_blank" rel="noopener"
-    >https://github.com/IzzelAliz/Arclight</a><br>
-<em>Taiyitist:</em> <a class="link" href="https://github.com/TaiyitistMC/Taiyitist"  target="_blank" rel="noopener"
-    >https://github.com/TaiyitistMC/Taiyitist</a><br>
-<em>Mohist:</em> <a class="link" href="https://mohistmc.com/"  target="_blank" rel="noopener"
-    >https://mohistmc.com/</a><br>
-<em>Catserver:</em> <a class="link" href="https://catmc.org/"  target="_blank" rel="noopener"
-    >https://catmc.org/</a><br>
-<em>Sponge:</em> <a class="link" href="https://spongepowered.org/"  target="_blank" rel="noopener"
-    >https://spongepowered.org/</a></p></blockquote>
-
+<p><em><strong>Cardboard:</strong></em> <a class="link" href="https://cardboardpowered.org/"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Arclight:</strong></em> <a class="link" href="https://github.com/IzzelAliz/Arclight"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Taiyitist:</strong></em> <a class="link" href="https://github.com/TaiyitistMC/Taiyitist"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Mohist:</strong></em> <a class="link" href="https://mohistmc.com/"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Catserver:</strong></em> <a class="link" href="https://catmc.org/"  target="_blank" rel="noopener"
+    >下载</a><br>
+<em><strong>Sponge:</strong></em> <a class="link" href="https://spongepowered.org/"  target="_blank" rel="noopener"
+    >下载</a></p></blockquote>
+<h3 id="构建服务端-1"><strong>构建服务端:</strong>
+</h3><p>首先把下载好的服务器核心文件放到任意文件夹内,这里以server为例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/server
+</span></span><span class="line"><span class="cl">    └──server.jar
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时执行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java -jar server.jar nogui
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>以下是代码解析(照顾新人):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java -jar server.jar nogui
+</span></span><span class="line"><span class="cl">  ├    ├     ├          ├
+</span></span><span class="line"><span class="cl">  ├    ├     ├          ├──关闭MOJANG自带的控制台
+</span></span><span class="line"><span class="cl">  ├    ├     ├
+</span></span><span class="line"><span class="cl">  ├    ├     └──服务器核心文件名
+</span></span><span class="line"><span class="cl">  ├    ├
+</span></span><span class="line"><span class="cl">  ├    └──执行jar文件
+</span></span><span class="line"><span class="cl">  ├
+</span></span><span class="line"><span class="cl">  └──调用java
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
  <footer class="article-footer">
     
@@ -514,51 +553,24 @@
      
     
         
-    <script
-  src="https://beaudar.lipk.org/client.js"
-  repo="PMCKkS/pmckk"
-  issue-term="pathname"
-  
-  theme="github-light"
-  crossorigin="anonymous"
-  async
-></script>
-
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
 <style>
-  .beaudar {
-    max-width: unset;
-  }
-</style>
-
-<script>
-  let beaudarLoaded = false;
-
-  function setBeaudarTheme(theme) {
-    let beaudar = document.querySelector(".beaudar iframe");
-    if (beaudar) {
-      beaudar.contentWindow.postMessage(
-        {
-          type: "set-theme",
-          theme: `github-${theme}`,
-        },
-        "https://beaudar.lipk.org"
-      );
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
     }
-  }
-
-  addEventListener("message", (event) => {
-    if (event.origin !== "https://beaudar.lipk.org") return;
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
     
-    beaudarLoaded = true;
-    setBeaudarTheme(document.documentElement.dataset.scheme);
-  });
-
-  window.addEventListener("onColorSchemeChange", (e) => {
-    if (!beaudarLoaded) return;
-    setBeaudarTheme(e.detail);
-  });
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"https://waline-for-hugo-inqqhvdxi-pmckks-projects.vercel.app/"});
 </script>
-
 
     
 

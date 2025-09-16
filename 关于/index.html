@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://pmckks.github.io/pmckk/%E5%85%B3%E4%BA%8E/'>
 
-<link rel="stylesheet" href="/pmckk/scss/style.min.a053d4e44d0d7b06b64d3ee15cc978c5b9e1f05ffba330d23702277eed10a59d.css"><meta property='og:title' content="关于">
+<link rel="stylesheet" href="/pmckk/scss/style.min.79514ec7f8a956de2628f43b7a35e0befbeae756092155751a1777b6878e6f1b.css"><meta property='og:title' content="关于">
 <meta property='og:description' content="这里是PMCK的博客.\n">
 <meta property='og:url' content='https://pmckks.github.io/pmckk/%E5%85%B3%E4%BA%8E/'>
 <meta property='og:site_name' content='PMCKK'>
@@ -322,51 +322,24 @@
      
     
         
-    <script
-  src="https://beaudar.lipk.org/client.js"
-  repo="PMCKkS/pmckk"
-  issue-term="pathname"
-  
-  theme="github-light"
-  crossorigin="anonymous"
-  async
-></script>
-
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
 <style>
-  .beaudar {
-    max-width: unset;
-  }
-</style>
-
-<script>
-  let beaudarLoaded = false;
-
-  function setBeaudarTheme(theme) {
-    let beaudar = document.querySelector(".beaudar iframe");
-    if (beaudar) {
-      beaudar.contentWindow.postMessage(
-        {
-          type: "set-theme",
-          theme: `github-${theme}`,
-        },
-        "https://beaudar.lipk.org"
-      );
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
     }
-  }
-
-  addEventListener("message", (event) => {
-    if (event.origin !== "https://beaudar.lipk.org") return;
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
     
-    beaudarLoaded = true;
-    setBeaudarTheme(document.documentElement.dataset.scheme);
-  });
-
-  window.addEventListener("onColorSchemeChange", (e) => {
-    if (!beaudarLoaded) return;
-    setBeaudarTheme(e.detail);
-  });
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"https://waline-for-hugo-inqqhvdxi-pmckks-projects.vercel.app/"});
 </script>
-
 
     
 
