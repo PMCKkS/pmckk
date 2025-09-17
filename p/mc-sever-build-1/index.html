@@ -488,7 +488,49 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="启动脚本以及优化参数"><strong>启动脚本以及优化参数:</strong>
-</h3>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-XX:+UseZGC ^
+</span></span><span class="line"><span class="cl">-XX:+ZGenerational ^
+</span></span><span class="line"><span class="cl">-XX:+AlwaysPreTouch ^
+</span></span><span class="line"><span class="cl">-XX:+UnlockExperimentalVMOptions ^
+</span></span><span class="line"><span class="cl">-XX:+UnlockDiagnosticVMOptions ^
+</span></span><span class="line"><span class="cl">-XX:+UseNUMA ^
+</span></span><span class="line"><span class="cl">-XX:+ZUncommit ^
+</span></span><span class="line"><span class="cl">-XX:+ZProactive ^
+</span></span><span class="line"><span class="cl">-XX:ZUncommitDelay=300 ^
+</span></span><span class="line"><span class="cl">-XX:SoftMaxHeapSize=16G ^
+</span></span><span class="line"><span class="cl">-XX:+ParallelRefProcEnabled ^
+</span></span><span class="line"><span class="cl">-XX:GCTimeRatio=90 ^
+</span></span><span class="line"><span class="cl">-XX:InitiatingHeapOccupancyPercent=20 ^
+</span></span><span class="line"><span class="cl">-XX:+PerfDisableSharedMem ^
+</span></span><span class="line"><span class="cl">-XX:+OmitStackTraceInFastThrow ^
+</span></span><span class="line"><span class="cl">-XX:+AlwaysActAsServerClassMachine ^
+</span></span><span class="line"><span class="cl">-Dcom.mojang.eula.agree=true ^
+</span></span><span class="line"><span class="cl">-Djava.net.preferIPv4Stack=true ^
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
  <footer class="article-footer">
     
