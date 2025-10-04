@@ -2,18 +2,18 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="MC服务器搭建">
-<title>MC服务器搭建指南-1</title>
+<title>MC服务端制作指南</title>
 
 <link rel='canonical' href='https://pmckks.github.io/pmckk/p/mc-sever-build-1/'>
 
-<link rel="stylesheet" href="/pmckk/scss/style.min.79514ec7f8a956de2628f43b7a35e0befbeae756092155751a1777b6878e6f1b.css"><meta property='og:title' content="MC服务器搭建指南-1">
+<link rel="stylesheet" href="/pmckk/scss/style.min.efd57e68d4ecb8e4b1dc590b873338160dca0ee72c73e4438ed2ad72ad90d85d.css"><meta property='og:title' content="MC服务端制作指南">
 <meta property='og:description' content="MC服务器搭建">
 <meta property='og:url' content='https://pmckks.github.io/pmckk/p/mc-sever-build-1/'>
 <meta property='og:site_name' content='PMCKK'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='MC' /><meta property='article:published_time' content='2025-09-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://pmckks.github.io/pmckk/p/mc-sever-build-1/OIP-C.png' />
-<meta name="twitter:title" content="MC服务器搭建指南-1">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='MC' /><meta property='article:published_time' content='2025-09-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://pmckks.github.io/pmckk/p/mc-sever-build-1/picture.png' />
+<meta name="twitter:title" content="MC服务端制作指南">
 <meta name="twitter:description" content="MC服务器搭建"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://pmckks.github.io/pmckk/p/mc-sever-build-1/OIP-C.png' />
+    <meta name="twitter:image" content='https://pmckks.github.io/pmckk/p/mc-sever-build-1/picture.png' />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
 
     </head>
@@ -276,14 +276,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#了解服务端文件架构"><strong>了解服务端文件架构</strong></a></li>
-    <li><a href="#构建服务端"><strong>构建服务端</strong></a>
-      <ol>
-        <li><a href="#下载服务器核心"><strong>下载服务器核心:</strong></a></li>
-        <li><a href="#构建服务端-1"><strong>构建服务端:</strong></a></li>
-        <li><a href="#启动脚本以及优化参数"><strong>启动脚本以及优化参数:</strong></a></li>
-      </ol>
-    </li>
+    <li><a href="#首先简单了解下关于mc的服务端">首先简单了解下关于MC的服务端</a></li>
   </ol>
 </nav>
         </div>
@@ -299,12 +292,12 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/pmckk/p/mc-sever-build-1/">
-                <img src="/pmckk/p/mc-sever-build-1/OIP-C_hu_a093f324dedda8dc.png"
-                        srcset="/pmckk/p/mc-sever-build-1/OIP-C_hu_a093f324dedda8dc.png 800w, /pmckk/p/mc-sever-build-1/OIP-C_hu_1418bda2a7499a9d.png 1600w"
+                <img src="/pmckk/p/mc-sever-build-1/picture_hu_2822e6f531dc2b5e.png"
+                        srcset="/pmckk/p/mc-sever-build-1/picture_hu_2822e6f531dc2b5e.png 800w, /pmckk/p/mc-sever-build-1/picture_hu_26763929954c0a8e.png 1600w"
                         width="800" 
-                        height="800" 
+                        height="450" 
                         loading="lazy"
-                        alt="Featured image of post MC服务器搭建指南-1" />
+                        alt="Featured image of post MC服务端制作指南" />
                 
             </a>
         </div>
@@ -315,14 +308,14 @@
     <header class="article-category">
         
         <a href="/pmckk/categories/mc%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" style="background-color: #2a9d8f; color: #fff;" >
-                MC服务器搭建
+                MC指南
             </a> 
     </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/pmckk/p/mc-sever-build-1/">MC服务器搭建指南-1</a>
+            <a href="/pmckk/p/mc-sever-build-1/">MC服务端制作指南</a>
         </h2>
 
         
@@ -358,7 +351,7 @@
 
 
             <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
         </div>
         
@@ -368,169 +361,28 @@
 </header> <section class="article-content">
     
     
-    <h2 id="了解服务端文件架构"><strong>了解服务端文件架构</strong>
-</h2><blockquote class="alert alert-tip">
-    <p><em>注:群组服会单独拉出来讲.</em></p></blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  └── /server  
-</span></span><span class="line"><span class="cl">        ├── .server core(名字一般为核心名如.fabric .mohist等)  
-</span></span><span class="line"><span class="cl">        ├──library(资源文件,此文件特殊,一般启动的时候会下载)  
-</span></span><span class="line"><span class="cl">        ├──config(配置文件)  
-</span></span><span class="line"><span class="cl">        ├──log(日志文件)  
-</span></span><span class="line"><span class="cl">        ├──world(存档文件夹)  
-</span></span><span class="line"><span class="cl">        ├──eula(用户协议:一般生成后需要把内容改为eula:true)  
-</span></span><span class="line"><span class="cl">        ├──server.properties.Properties(服务器配置文件，其他核心会有bukkit spigot等)  
-</span></span><span class="line"><span class="cl">        └──server.jar(服务核心文件,要是没这个就别玩了孩子)  
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="构建服务端"><strong>构建服务端</strong>
-</h2><h3 id="下载服务器核心"><strong>下载服务器核心:</strong>
-</h3><p><strong>纯净端:</strong></p>
-<blockquote>
-<p><em><strong>Minecraft:</strong></em> <a class="link" href="https://mcversions.net/"  target="_blank" rel="noopener"
-    >下载</a></p></blockquote>
-<p><strong>插件端:</strong></p>
-<blockquote>
-<p><em><strong>Paper:</strong></em> <a class="link" href="https://papermc.io/downloads/all"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Purpur:</strong></em> <a class="link" href="https://purpurmc.org/download/purpur/"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Leaves:</strong></em> <a class="link" href="https://leavesmc.org/downloads/leaves"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Leaf:</strong></em> <a class="link" href="https://www.leafmc.one/zh/download"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>PandaSpigot:</strong></em> <a class="link" href="https://nightly.link/hpfxd/PandaSpigot/workflows/build/master/Server%20JAR.zip"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>SportPaper:</strong></em> <a class="link" href="https://github.com/Electroid/SportPaper"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>CraftBukkit:</strong></em> <a class="link" href="https://getbukkit.org/download/craftbukkit"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Spigot:</strong></em> <a class="link" href="https://getbukkit.org/download/spigot/"  target="_blank" rel="noopener"
-    >下载</a></p></blockquote>
-<p><strong>模组端(我们师徒三人):</strong></p>
-<blockquote>
-<p><em><strong>Fabric:</strong></em> <a class="link" href="https://fabricmc.net/"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Forge:</strong></em> <a class="link" href="https://files.minecraftforge.net/net/minecraftforge/forge/"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>NeoForge:</strong></em> <a class="link" href="https://neoforged.net/"  target="_blank" rel="noopener"
-    >下载</a></p></blockquote>
-<p><strong>混合端:</strong></p>
-<blockquote>
-<p><em><strong>Cardboard:</strong></em> <a class="link" href="https://cardboardpowered.org/"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Arclight:</strong></em> <a class="link" href="https://github.com/IzzelAliz/Arclight"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Taiyitist:</strong></em> <a class="link" href="https://github.com/TaiyitistMC/Taiyitist"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Mohist:</strong></em> <a class="link" href="https://mohistmc.com/"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Catserver:</strong></em> <a class="link" href="https://catmc.org/"  target="_blank" rel="noopener"
-    >下载</a><br>
-<em><strong>Sponge:</strong></em> <a class="link" href="https://spongepowered.org/"  target="_blank" rel="noopener"
-    >下载</a></p></blockquote>
-<h3 id="构建服务端-1"><strong>构建服务端:</strong>
-</h3><p>首先把下载好的服务器核心文件放到任意文件夹内,这里以server为例:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/server
-</span></span><span class="line"><span class="cl">    └──server.jar
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>此时执行以下命令(windows可以在本地新建文本粘贴以下内容保存将后缀改完.bat)：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java -jar server.jar nogui
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>以下是代码解析(照顾新人):</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java -jar server.jar nogui
-</span></span><span class="line"><span class="cl">  ├    ├     ├          ├
-</span></span><span class="line"><span class="cl">  ├    ├     ├          ├──关闭MOJANG自带的控制台
-</span></span><span class="line"><span class="cl">  ├    ├     ├
-</span></span><span class="line"><span class="cl">  ├    ├     └──服务器核心文件名
-</span></span><span class="line"><span class="cl">  ├    ├
-</span></span><span class="line"><span class="cl">  ├    └──执行jar文件
-</span></span><span class="line"><span class="cl">  ├
-</span></span><span class="line"><span class="cl">  └──调用java
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="启动脚本以及优化参数"><strong>启动脚本以及优化参数:</strong>
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-XX:+UseZGC ^
-</span></span><span class="line"><span class="cl">-XX:+ZGenerational ^
-</span></span><span class="line"><span class="cl">-XX:+AlwaysPreTouch ^
-</span></span><span class="line"><span class="cl">-XX:+UnlockExperimentalVMOptions ^
-</span></span><span class="line"><span class="cl">-XX:+UnlockDiagnosticVMOptions ^
-</span></span><span class="line"><span class="cl">-XX:+UseNUMA ^
-</span></span><span class="line"><span class="cl">-XX:+ZUncommit ^
-</span></span><span class="line"><span class="cl">-XX:+ZProactive ^
-</span></span><span class="line"><span class="cl">-XX:ZUncommitDelay=300 ^
-</span></span><span class="line"><span class="cl">-XX:SoftMaxHeapSize=16G ^
-</span></span><span class="line"><span class="cl">-XX:+ParallelRefProcEnabled ^
-</span></span><span class="line"><span class="cl">-XX:GCTimeRatio=90 ^
-</span></span><span class="line"><span class="cl">-XX:InitiatingHeapOccupancyPercent=20 ^
-</span></span><span class="line"><span class="cl">-XX:+PerfDisableSharedMem ^
-</span></span><span class="line"><span class="cl">-XX:+OmitStackTraceInFastThrow ^
-</span></span><span class="line"><span class="cl">-XX:+AlwaysActAsServerClassMachine ^
-</span></span><span class="line"><span class="cl">-Dcom.mojang.eula.agree=true ^
-</span></span><span class="line"><span class="cl">-Djava.net.preferIPv4Stack=true ^
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <h1 id="mc服务端制作指南">MC服务端制作指南
+</h1><blockquote class="alert alert-tip">
+    <p>前言：本教程是针对完全没开过服务器的萌新所写。</p></blockquote>
+<h2 id="首先简单了解下关于mc的服务端">首先简单了解下关于MC的服务端
+</h2><p> MC服务端不同于客户端,服务端不需要进行图形渲染,不存材质包文件夹,大大减少了硬盘空间占用,所以我们常见的服务端都是以命令行窗口展示给玩家的如图1-1.</p>
+<p><img src="/pmckk/p/mc-sever-build-1/1-1.png"
+	width="1107"
+	height="621"
+	srcset="/pmckk/p/mc-sever-build-1/1-1_hu_34e034d351ee5d2e.png 480w, /pmckk/p/mc-sever-build-1/1-1_hu_92a4e6c64e6d666c.png 1024w"
+	loading="lazy"
+	
+		alt="图1-1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="427px"
+	
+></p>
+<p> 这是一个FABRIC服务端在windows系统运行的样子,只有文字没有图形界面.
+到这里你大概(或许吧)了解了服务端和客户端区别.</p>
+
 </section>
  <footer class="article-footer">
     
@@ -560,39 +412,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/pmckk/p/mc-sever-core/">
-        
-        
-            <div class="article-image">
-                <img src="/pmckk/p/mc-sever-core/background.34194c98caad8ab6706a5d2f0f9604f5_hu_f0ecab137a9e3ad4.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post MC服务器核心知识"
-                        data-key="mc-sever-core" 
-                        data-hash="md5-NBlMmMqtirZwal0vD5YE9Q==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">MC服务器核心知识</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     

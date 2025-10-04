@@ -21,7 +21,21 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://pmckks.github.io/pmckk/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;这里是PMCK的博客.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&#34;https://pmckks.github.io/pmckk/static/favicon/favicon.ico&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;头像&#34;
+	
+	
+&gt;&lt;br&gt;
+#这里是PMCK的博客.&lt;br&gt;
+##关于我&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;计算机网络专业毕业生,专业内容:华为ensp,思科(Cisco),分布式云计算,网络安全,Python自动化脚本。
+目前常用的语言:Java,Python.&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>
